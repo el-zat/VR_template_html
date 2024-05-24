@@ -1,0 +1,14 @@
+//fonts
+@mixin font_title ($_size, $_height, $_weight) {
+    font-size: $_size;
+    line-height: $_height;
+    font-weight: $_weight;
+    font-family: "Montserrat", sans-serif;
+    color: #ffff;
+}
+
+@mixin flex ($_jc, $_ai) {
+    display: flex;
+    justify-content: $_jc;
+    align-items: $_ai;
+}

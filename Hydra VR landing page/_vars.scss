@@ -1,0 +1,42 @@
+
+//fonts
+%fonts {
+    font-family: "Montserrat", sans-serif;
+    color: #ffff;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+
+//buttons
+%btn {
+    @extend %fonts;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    border-radius: 40px;
+    height: 48px;
+    text-align: center;
+    
+    &:hover {
+        cursor: pointer; 
+    }  
+}
+
+%btn_dark {
+    @extend %btn;
+    color: #343045;
+    background: linear-gradient(to right, #8176af 0%, #c0b7e8 100%);
+}
+
+%btn_light {
+    @extend %btn;
+    background: transparent;
+    border: 1px solid #ffffff;
+}
+
+
+
+//breakpoints
