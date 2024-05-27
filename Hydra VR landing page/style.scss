@@ -186,6 +186,12 @@ body {
     background-color: rgba(192, 183, 232, 0.33);
 }
 
+a,
+a:visited {
+    color: #ffff;
+    text-decoration: none;
+}
+
 header {
     @include respondTo ($_mobile){
         width: 350px;
@@ -204,86 +210,118 @@ header {
 .header__top {
     width: 100%;
     @include flex (space-between, center, row);
+}
 
-    .logo {
+.header__logo {
+    @include flex (space-between, center, row);
+
+    img:first-child {
+        @include respondTo ($_mobile){
+            width:69px;
+            height: 69px;               
+        };
+        @include respondTo ($_desktop){
+            width: 102px;
+            height: 102px;
+        };            
+    }   
+    img:nth-child(2) {
+        @include respondTo ($_mobile){
+            width: 42px;
+            height: 28px;
+            margin-left: 1.1rem;             
+        };
+        @include respondTo ($_desktop){
+            width: 75px;
+            height: 46px;
+            margin-left: 1.5rem;
+        };
+    }
+}
+
+    
+.header__menu {
+    
+    @include respondTo ($_mobile){
+        display: none;             
+    };
+    @include respondTo ($_desktop){
+        display: inline;
+        font-size: 1.2rem;
         @include flex (space-between, center, row);
+
+        .header__menu-item {
+            margin-left: 3.8rem;
     
-        img:first-child {
-            @include respondTo ($_mobile){
-                width:69px;
-                height: 69px;               
-            };
-            @include respondTo ($_desktop){
-                width: 102px;
-                height: 102px;
-            };            
-        }   
-        img:nth-child(2) {
-            @include respondTo ($_mobile){
-                width: 42px;
-                height: 28px;
-                margin-left: 1.1rem;             
-            };
-            @include respondTo ($_desktop){
-                width: 75px;
-                height: 46px;
-                margin-left: 1.5rem;
-            };
+            &:first-child {
+                margin-left: 0;
+            }                
+            &:hover {
+                cursor: pointer; 
+            }
         }
-    }
+    };
+}
+
+
+.header-actions {
+    @include respondTo ($_mobile){
+        display: none;             
+    };
+    @include respondTo ($_desktop){
+        display: inline;
+        .btn-light {
+            width: 155px;
+        }    
+        .btn-dark {
+            width: 155px;
+            margin-left: 3.8rem;
+        }
+    };       
+}
+
+
+.hamburger__link {
     
-    nav {
-        @include respondTo ($_mobile){
-            display: none;             
-        };
-        @include respondTo ($_desktop){
-            display: inline;
-            font-size: 1.2rem;
-            @include flex (space-between, center, row);
+    @include respondTo ($_mobile){
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        .menu__items {
+            display: none;
+        }
+        &:hover {
+            @include flex (space-between, flex-end, column);
+            .menu__items {
+                margin-top: 20px;
+                height: 80px;
+                margin-right: 0;
+                @include flex (space-between, flex-end, column);
+                @include font_title(1.2rem, normal, normal);
+            }
+        }
+    };
     
-            .header__menu-link:link {
-                text-decoration: none;
+    @include respondTo ($_desktop){
+        display: none;
+        .menu__items {
+            display: none;
+        }
+        &:hover {
+            display: none;
+            .menu__items {
+                display: none;
             }
-        
-            .header__menu-link {
-                margin-left: 3.8rem;
-        
-                &:first-child {
-                    margin-left: 0;
-                }                
-                &:hover {
-                    cursor: pointer; 
-                }
-            }
-        };
-    }
-    a,
-    a:visited {
-        color: #ffff;
-        text-decoration: none;
-    }
-    .header-actions {
-        @include respondTo ($_mobile){
-            display: none;             
-        };
-        @include respondTo ($_desktop){
-            display: inline;
-            .btn-light {
-                width: 155px;
-            }    
-            .btn-dark {
-                width: 155px;
-                margin-left: 3.8rem;
-            }
-        };       
-    }
+        }
+    };
 }
 
 .header__main {
     width: 100%;
 
     @include respondTo ($_mobile){      
-        margin-top: 48.5px;
+        margin-top: 100px;
         @include flex (none, center, column-reverse);    
     };
 
@@ -645,11 +683,6 @@ main {
 }
 
 .about__content {
-    a,
-    a:visited {
-        text-decoration: none;
-    }
-        
     @include respondTo ($_mobile){
         @include flex (none, center, column);
         margin-top: 51px;  
