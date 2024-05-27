@@ -1,3 +1,5 @@
+@import './vars';
+
 //fonts
 @mixin font_title ($_size, $_height, $_weight) {
     font-size: $_size;
@@ -7,8 +9,19 @@
     color: #ffff;
 }
 
-@mixin flex ($_jc, $_ai) {
+//display: flex
+@mixin flex ($_jc, $_ai, $_fd) {
     display: flex;
     justify-content: $_jc;
     align-items: $_ai;
+    flex-direction: $_fd;
 }
+
+//adaptive mixins
+
+@mixin respondTo ($_minWidth) {
+    @media (min-width: $_minWidth) {
+        @content;
+    }
+}
+

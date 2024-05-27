@@ -45,7 +45,7 @@
                     </a>
                 </div>   
             </div>
-            <div class="header__main">
+            <div class="header__main">                
                 <article class="header__main-article">
                     <h2><span>Dive</span> Into The Depths</h2>
                     <h2>Of <span>Virtual Reality</span></h2>
@@ -65,11 +65,13 @@
                     <img id="rectangle-hero" src="./img/rectangle-hero.png" alt="rectangle-hero">
                     <img id="hero" src="./img/hero.png" alt="hero">
                 </div>
+                
             </div>
             <div class="header__bottom">
-                <img src="./img/rectangle 6.png" class="header__bottom-image" alt="rectangle">
+                <img src="./img/rectangle 6.png" id="rectangle_large" alt="rectangle">
+                <img src="./img/rectangle_small.png" id="rectangle_small" alt="rectangle_small">
                 <section class="contacts">
-                    <article class="contacts__article">
+                    <article class="contacts__article" id="location">
                         <img src="./img/location-icon.png" class="icon" alt="location-icon">
                         <div class="contacts__article-content">
                             <h3>Pay Us a Visit</h3>
@@ -77,7 +79,7 @@
                         </div>
                     </article>
                     <div class="divider"></div>
-                    <article class="contacts__article">
+                    <article class="contacts__article" id="phone">
                         <img src="./img/phone-icon.png" class="icon" alt="location-icon">
                         <div class="contacts__article-content">
                             <h3>Give Us a Call</h3>
@@ -85,7 +87,7 @@
                         </div>
                     </article>
                     <div class="divider"></div>
-                    <article class="contacts__article">
+                    <article class="contacts__article" id="mail">
                         <img src="./img/mail-icon.png" class="icon" alt="location-icon">
                         <div class="contacts__article-content">
                             <h3>Send Us a Message</h3>
@@ -98,12 +100,12 @@
 
         <main>
             <section class="information">
-                <article class="introduction">
+                <article class="introduction" id="introduction">
                     <div class="article__title">
                         <h2>INTRODUCTION</h2>
                         <div class="article__title-arrow">
                             <h2>TO HYDRA VR</h2>
-                            <img src="./img/arrow-long.png" alt="arrow">
+                            <img src="./img/arrow-long.png" alt="arrow" id="arrow-long">
                         </div>                      
                     </div>
                     <div class="article__content">Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat 
@@ -111,7 +113,7 @@
                         quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare 
                         lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</div>
                 </article>
-                <article class="about">
+                <article class="about" id="about">
                     <img src="./img/about-image.png">
                     <div class="about__content">
                         <h2>ABOUT</h2>
@@ -130,12 +132,12 @@
                         </a>                        
                     </div>
                 </article>
-                <article class="why-build">
+                <article class="why-build" id="why-build">
                     <div class="article__title">
                         <h2>WHY BUILD</h2>
                         <div class="article__title-arrow">
                             <h2>WITH HYDRA?</h2>
-                            <img src="./img/arrow-long.png" alt="arrow">
+                            <img src="./img/arrow-long.png" alt="arrow" id="arrow-long">
                         </div>                      
                     </div>
                     <div class="article__content">Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat 
@@ -204,7 +206,10 @@
                 </article>
             </section>
             <section class="tech">
-                <img src="./img/tech-image.png" id="tech-image" alt="tech">
+                <div class="tech__image">
+                    <img src="./img/tech-image_large.png" id="tech-image_large" alt="tech">
+                    <img src="./img/tech-image_small.png" id="tech-image_small" alt="tech">
+                </div>
                 <div class="tech__content"> 
                     <h2>TECHNOLOGIES & HARDWARE</h2>
                     <h2>USED BY HYDRA VR.</h2>
@@ -222,12 +227,12 @@
                 </div>               
             </section>
             <section class="process">
-                <article class="how-build">
+                <article class="how-build" id="how-build">
                     <div class="article__title">
                         <h2>HOW WE BUILD</h2>
                         <div class="article__title-arrow">
                             <h2>WITH HYDRA VR?</h2>
-                            <img src="./img/arrow-long.png" alt="arrow">
+                            <img src="./img/arrow-long.png" id="arrow-long" alt="arrow">
                         </div>                      
                     </div>
                     <div class="article__content">Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat 
@@ -235,78 +240,78 @@
                         quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare 
                         lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</div>
                 </article>
-                <section class="numbers">
-                    <div class="numbers__card">
-                        <div class="card__image">
-                            <img src="./img/ellipse_number_grey.png" id="ellipse_grey" alt="ellipse">
-                            <img src="./img/ellipse_number.png" id="ellipse_number" alt="ellipse">
-                            <img src="./img/01.png" id="number" alt="number">
-                        </div>
-                        <div class="card__content">
-                            <img src="./img/arrow-small-right.png" class="arrow-small-right" alt="arrow-small-right">
-                            <div class="card__content-text">
-                                <h3>3D Conception</h3>
-                                <h3>& Design</h3>
-                            </div>                           
-                        </div>
-                    </div>
-                    <div class="numbers__card">
-                        <div class="card__image">
-                            <img src="./img/ellipse_number_grey.png" id="ellipse_grey" alt="ellipse">
-                            <img src="./img/ellipse_number.png" id="ellipse_number" alt="ellipse">
-                            <img src="./img/02.png" id="number" alt="number">
-                        </div>
-                        <div class="card__content">
-                            <img src="./img/arrow-small-right.png" class="arrow-small-right" alt="arrow-small-right">
-                            <div class="card__content-text">
-                                <h3>Interaction</h3>
-                                <h3>Design</h3>
-                            </div>                           
-                        </div>
-                    </div>
-                    <div class="numbers__card">
-                        <div class="card__image">
-                            <img src="./img/ellipse_number_grey.png" id="ellipse_grey" alt="ellipse">
-                            <img src="./img/ellipse_number.png" id="ellipse_number" alt="ellipse">
-                            <img src="./img/03.png" id="number" alt="number">
-                        </div>
-                        <div class="card__content">
-                            <img src="./img/arrow-small-right.png" class="arrow-small-right" alt="arrow-small-right">
-                            <div class="card__content-text">
-                                <h3>VR World</h3>
-                                <h3>User Testing</h3>
-                            </div>                           
-                        </div>
-                    </div>
-                    <div class="numbers__card">
-                        <div class="card__image">
-                            <img src="./img/ellipse_number_grey.png" id="ellipse_grey" alt="ellipse">
-                            <img src="./img/ellipse_number.png" id="ellipse_number" alt="ellipse">
-                            <img src="./img/04.png" id="number" alt="number">
-                        </div>
-                        <div class="card__content">
-                            <img src="./img/arrow-small-right.png" class="arrow-small-right" alt="arrow-small-right">
-                            <div class="card__content-text">
-                                <h3>Hydra VR</h3>
-                                <h3>Deploy</h3>
-                            </div>                           
-                        </div>
-                    </div>
-                    
-                </section>
             </section>
+            <section class="numbers">
+                <div class="numbers__card">
+                    <div class="card__image">
+                        <img src="./img/ellipse_number_grey.png" id="ellipse_grey" alt="ellipse">
+                        <img src="./img/ellipse_number.png" id="ellipse_number" alt="ellipse">
+                        <img src="./img/01.png" id="number" alt="number">
+                    </div>
+                    <div class="card__content">
+                        <img src="./img/arrow-small-right.png" class="arrow-small-right" id="arrow-small-right" alt="arrow-small-right">
+                        <div class="card__title">                           
+                            <h3>3D Conception</h3>                    
+                            <h3>& Design</h3>                          
+                        </div>
+                    </div>
+                </div>
+                <div class="numbers__card">
+                    <div class="card__image">
+                        <img src="./img/ellipse_number_grey.png" id="ellipse_grey" alt="ellipse">
+                        <img src="./img/ellipse_number.png" id="ellipse_number" alt="ellipse">
+                        <img src="./img/02.png" id="number" alt="number">
+                    </div>
+                    <div class="card__content">
+                        <img src="./img/arrow-small-right.png" class="arrow-small-right" id="arrow-small-right" alt="arrow-small-right">
+                        <div class="card__title">                           
+                            <h3>Interaction</h3>                    
+                            <h3>Design</h3>                          
+                        </div>
+                    </div>
+                </div>
+                <div class="numbers__card">
+                    <div class="card__image">
+                        <img src="./img/ellipse_number_grey.png" id="ellipse_grey" alt="ellipse">
+                        <img src="./img/ellipse_number.png" id="ellipse_number" alt="ellipse">
+                        <img src="./img/03.png" id="number" alt="number">
+                    </div>
+                    <div class="card__content">
+                        <img src="./img/arrow-small-right.png" class="arrow-small-right" id="arrow-small-right" alt="arrow-small-right">
+                        <div class="card__title">                           
+                            <h3>VR World</h3>                    
+                            <h3>User Testing</h3>                          
+                        </div>
+                    </div>
+                </div>
+                <div class="numbers__card">
+                    <div class="card__image">
+                        <img src="./img/ellipse_number_grey.png" id="ellipse_grey" alt="ellipse">
+                        <img src="./img/ellipse_number.png" id="ellipse_number" alt="ellipse">
+                        <img src="./img/04.png" id="number" alt="number">
+                    </div>
+                    <div class="card__content">
+                        <img src="./img/arrow-small-right.png" class="arrow-small-right" id="arrow-small-right" alt="arrow-small-right">
+                        <div class="card__title">                           
+                            <h3>Hydra VR</h3>                    
+                            <h3>Deploy</h3>                          
+                        </div>
+                    </div>
+            </section>
+      
             <section class="join">
                 <div class="join__content">
                     <div class="join__content-title">JOIN HYDRA</div>
                     <div class="divider"></div>
-                    <div class="join__content-title">Let’s Build Your VR Experience</div>
+                    <div class="join__content-title">Let’s Build <br> Your VR Experience</div>
                 </div>
-                <form action="#" method="post" class="join__form">                   
-                    <input type="text" id="first_name" placeholder="First Name">
-                    <input type="text" id="lastname" placeholder="Last Name">
-                    <input type="email" id="email" placeholder="Email">
-                    <input type="tel" id="phone_number" placeholder="Phone Number">
-                    
+                <form action="#" method="post" class="join__form">
+                    <div class="input__contacts">
+                        <input type="text" id="first_name" placeholder="First Name">
+                        <input type="text" id="lastname" placeholder="Last Name">
+                        <input type="email" id="email" placeholder="Email">
+                        <input type="tel" id="phone_number" placeholder="Phone Number">
+                    </div>                   
                     <input type="text" id="subject" placeholder="Subject">
                     <textarea id="tell" name="tell" maxlength="214px" placeholder="Tell Us Something...">Tell Us Something...                      
                     </textarea>
@@ -354,7 +359,12 @@
             
             <section class="footer__bottom">
                 <div class="divider"></div>
-                <h3>2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED</h3>
+                <h3 id="in-line">2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED</h3>
+                <h3 id="in-column">
+                    <p>2023 © HYDRA LANDING PAGE</p>
+                    <p>BY ZINE. E. FALOUTI</p>
+                    <p>ALL RIGHTS RESERVED</p>
+                </h3>
             </section>
 
         </footer>
