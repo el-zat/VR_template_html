@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
 </head>
 
 <body>
@@ -80,10 +82,8 @@
                 
             </div>
             <div class="header__bottom">
-                <img src="./img/rectangle 6.png" id="rectangle_large" alt="rectangle">
-                <img src="./img/rectangle_small.png" id="rectangle_small" alt="rectangle_small">
-                <section class="contacts">
-                    <article class="contacts__article" id="location">
+                <section class="contacts">         
+                    <article class="contacts__article" id="location">                 
                         <img src="./img/location-icon.png" class="icon" alt="location-icon">
                         <div class="contacts__article-content">
                             <h3>Pay Us a Visit</h3>
@@ -106,8 +106,48 @@
                             <p>Contact@HydraVTech.com</p>
                         </div>
                     </article> 
-                </section>            
+                </section>
             </div>
+
+            <div class="header__bottom-swiper">    
+                <div class="swiper_contacts swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="contacts__article" id="location">                 
+                                <img src="./img/location-icon.png" class="icon" alt="location-icon">
+                                <div class="contacts__article-content">
+                                    <p>Union St, Seattle, WA 98101,<br> United States</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="contacts__article" id="phone">
+                                <img src="./img/phone-icon.png" class="icon" alt="location-icon">
+                                <div class="contacts__article-content">
+                                    <h3>Give Us a Call</h3>
+                                    <p>(110) 1111-1010</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="contacts__article" id="mail">
+                                <img src="./img/mail-icon.png" class="icon" alt="location-icon">
+                                <div class="contacts__article-content">
+                                    <h3>Send Us a Message</h3>
+                                    <p>Contact@HydraVTech.com</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev" style="color:#8176af">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-button-next" style="color:#8176af">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>    
+            </section>
         </header>
 
         <main>
@@ -160,63 +200,177 @@
 
             </section>
             <section class="themen">
-                <article class="themen__card">
-                    <img src="./img/ellipse.png" id="ellipse" alt="ellipse">
-                    <img src="./img/simulation.png" id="ellipse_pict" alt="simulation">
+                <article class="themen__card" id="simulation">                  
                     <div class="themen__card-content">
-                        <h2>SIMULATION</h2>
-                        <div class="divider"></div>
-                        <p>Vitae sapien pellentesque habitant morbi
-                        nunc. Viverra aliquet  porttitor rhoncus 
-                        libero justo laoreet sit amet vitae.</p>
-                        <a href="#">
-                            <button class="btn-dark">TRY IT NOW</button>
-                        </a>                     
-                    </div>     
+                        <div class="themen__card-image">
+                            <img src="./img/ellipse.png" id="ellipse" alt="ellipse">
+                            <img src="./img/simulation.png" id="ellipse_pict" alt="simulation">
+                        </div>         
+                        <div class="themen__card-text">
+                            <h2>SIMULATION</h2>
+                            <div class="divider"></div>
+                            <p>Vitae sapien pellentesque habitant morbi
+                            nunc. Viverra aliquet  porttitor rhoncus 
+                            libero justo laoreet sit amet vitae.</p>
+                            <a href="#">
+                                <button class="btn-dark">TRY IT NOW</button>
+                            </a>                                            
+                        </div> 
+                    </div>                      
                 </article>
-                <article class="themen__card">
-                    <img src="./img/ellipse.png" id="ellipse" alt="ellipse">
-                    <img src="./img/education.png" id="ellipse_pict" alt="simulation">
+                <article class="themen__card" id="education">                   
                     <div class="themen__card-content">
-                        <h2>EDUCATION</h2>
-                        <div class="divider"></div>
-                        <p>Vitae sapien pellentesque habitant morbi
-                        nunc. Viverra aliquet  porttitor rhoncus 
-                        libero justo laoreet sit amet vitae.</p>
-                        <a href="#">
-                            <button class="btn-dark">TRY IT NOW</button>
-                        </a>
-                    </div>     
+                        <div class="themen__card-image">
+                            <img src="./img/ellipse.png" id="ellipse" alt="ellipse">
+                            <img src="./img/education.png" id="ellipse_pict" alt="simulation">
+                        </div>
+                        <div class="themen__card-text">
+                            <h2>EDUCATION</h2>
+                            <div class="divider"></div>
+                            <p>Vitae sapien pellentesque habitant morbi
+                            nunc. Viverra aliquet  porttitor rhoncus 
+                            libero justo laoreet sit amet vitae.</p>
+                            <a href="#">
+                                <button class="btn-dark">TRY IT NOW</button>
+                            </a>
+                        </div> 
+                    </div>                                 
                 </article>
-                <article class="themen__card">
-                    <img src="./img/ellipse.png" id="ellipse" alt="ellipse">
-                    <img src="./img/self-care.png" id="ellipse_pict" alt="simulation">
+                <article class="themen__card" id="self-care">
                     <div class="themen__card-content">
-                        <h2>SELF-CARE</h2>
-                        <div class="divider"></div>
-                        <p>Vitae sapien pellentesque habitant morbi
-                        nunc. Viverra aliquet  porttitor rhoncus 
-                        libero justo laoreet sit amet vitae.</p>
-                        <a href="#">
-                            <button class="btn-dark">TRY IT NOW</button>
-                        </a>
-                    </div>     
+                        <div class="themen__card-image">
+                            <img src="./img/ellipse.png" id="ellipse" alt="ellipse">
+                            <img src="./img/self-care.png" id="ellipse_pict" alt="simulation">
+                        </div>             
+                        <div class="themen__card-text">
+                            <h2>SELF-CARE</h2>
+                            <div class="divider"></div>
+                            <p>Vitae sapien pellentesque habitant morbi
+                            nunc. Viverra aliquet  porttitor rhoncus 
+                            libero justo laoreet sit amet vitae.</p>
+                            <a href="#">
+                                <button class="btn-dark">TRY IT NOW</button>
+                            </a>
+                        </div>     
+                    </div>
+                    
                 </article>
-                <article class="themen__card">
-                    <img src="./img/ellipse.png" id="ellipse" alt="ellipse">
-                    <img src="./img/outdoor.png" id="ellipse_pict" alt="simulation">
+                <article class="themen__card" id="outdoor">
                     <div class="themen__card-content">
-                        <h2>OUTDOOR</h2>
-                        <div class="divider"></div>
-                        <p>Vitae sapien pellentesque habitant morbi
-                        nunc. Viverra aliquet  porttitor rhoncus 
-                        libero justo laoreet sit amet vitae.</p>
-                        <a href="#">
-                            <button class="btn-dark">TRY IT NOW</button>
-                        </a>
-                    </div>     
+                        <div class="themen__card-image">
+                            <img src="./img/ellipse.png" id="ellipse" alt="ellipse">
+                            <img src="./img/outdoor.png" id="ellipse_pict" alt="simulation">
+                        </div>
+                        <div class="themen__card-text">
+                            <h2>OUTDOOR</h2>
+                            <div class="divider"></div>
+                            <p>Vitae sapien pellentesque habitant morbi
+                            nunc. Viverra aliquet  porttitor rhoncus 
+                            libero justo laoreet sit amet vitae.</p>
+                            <a href="#">
+                                <button class="btn-dark">TRY IT NOW</button>
+                            </a>
+                        </div>
+                    </div>
                 </article>
             </section>
+
+            <section class="themen-swiper">
+                <div class="swiper_themen swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="themen__card" id="simulation">                  
+                                <div class="themen__card-content">
+                                    <div class="themen__card-image">
+                                        <img src="./img/ellipse.png" id="ellipse" alt="ellipse">
+                                        <img src="./img/simulation.png" id="ellipse_pict" alt="simulation">
+                                    </div>         
+                                    <div class="themen__card-text">
+                                        <h2>SIMULATION</h2>
+                                        <div class="divider"></div>
+                                        <p>Vitae sapien pellentesque habitant morbi
+                                        nunc. Viverra aliquet  porttitor rhoncus 
+                                        libero justo laoreet sit amet vitae.</p>
+                                        <a href="#">
+                                            <button class="btn-dark">TRY IT NOW</button>
+                                        </a>                                            
+                                    </div> 
+                                </div>                      
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="themen__card" id="education">                   
+                                <div class="themen__card-content">
+                                    <div class="themen__card-image">
+                                        <img src="./img/ellipse.png" id="ellipse" alt="ellipse">
+                                        <img src="./img/education.png" id="ellipse_pict" alt="simulation">
+                                    </div>
+                                    <div class="themen__card-text">
+                                        <h2>EDUCATION</h2>
+                                        <div class="divider"></div>
+                                        <p>Vitae sapien pellentesque habitant morbi
+                                        nunc. Viverra aliquet  porttitor rhoncus 
+                                        libero justo laoreet sit amet vitae.</p>
+                                        <a href="#">
+                                            <button class="btn-dark">TRY IT NOW</button>
+                                        </a>
+                                    </div> 
+                                </div>                                 
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="themen__card" id="self-care">
+                                <div class="themen__card-content">
+                                    <div class="themen__card-image">
+                                        <img src="./img/ellipse.png" id="ellipse" alt="ellipse">
+                                        <img src="./img/self-care.png" id="ellipse_pict" alt="simulation">
+                                    </div>             
+                                    <div class="themen__card-text">
+                                        <h2>SELF-CARE</h2>
+                                        <div class="divider"></div>
+                                        <p>Vitae sapien pellentesque habitant morbi
+                                        nunc. Viverra aliquet  porttitor rhoncus 
+                                        libero justo laoreet sit amet vitae.</p>
+                                        <a href="#">
+                                            <button class="btn-dark">TRY IT NOW</button>
+                                        </a>
+                                    </div>     
+                                </div>
+                                
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="themen__card" id="outdoor">
+                                <div class="themen__card-content">
+                                    <div class="themen__card-image">
+                                        <img src="./img/ellipse.png" id="ellipse" alt="ellipse">
+                                        <img src="./img/outdoor.png" id="ellipse_pict" alt="simulation">
+                                    </div>
+                                    <div class="themen__card-text">
+                                        <h2>OUTDOOR</h2>
+                                        <div class="divider"></div>
+                                        <p>Vitae sapien pellentesque habitant morbi
+                                        nunc. Viverra aliquet  porttitor rhoncus 
+                                        libero justo laoreet sit amet vitae.</p>
+                                        <a href="#">
+                                            <button class="btn-dark">TRY IT NOW</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-button-prev" style="color:#8176af">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-button-next" style="color:#8176af">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </section>
+
+
             <section class="tech">
                 <div class="tech__image">
                     <img src="./img/tech-image_large.png" id="tech-image_large" alt="tech">
@@ -381,6 +535,40 @@
 
         </footer>
 
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            const swiper_contacts = new Swiper('.swiper_contacts', {
+                direction: 'horizontal',
+                loop: true,
+                
+                autoplay: {
+                    delay: 500,
+                },
+                
+                navigation: {
+                    nextEl: '.swiper-button-next',  
+                    prevEl: '.swiper-button-prev',
+                },
+                
+                });
+
+            const swiper = new Swiper('.swiper_themen', {
+                direction: 'horizontal',
+                loop: true,
+                
+                autoplay: {
+                    delay: 500,
+                },
+                
+                navigation: {
+                    nextEl: '.swiper-button-next',  
+                    prevEl: '.swiper-button-prev',
+                },
+                
+                });
+        </script>
     
+        
 </body>
 </html>

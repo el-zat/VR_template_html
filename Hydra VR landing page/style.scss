@@ -427,8 +427,19 @@ header {
 
 
 .header__bottom {
-    width: 100%;
-    position: relative;
+    @include respondTo ($_mobile){
+        display: none;         
+    };
+    
+    @include respondTo ($_desktop){
+        background-image: url("/img/rectangle_large.png");
+        display: block;
+        width: 100%;
+        position: relative;
+        margin-top: 88px;
+        height: 167px;
+    };
+
     .contacts {
         height: 100%;
         width: 100%;
@@ -436,101 +447,55 @@ header {
         top: 0;
         left: 0;
         @include flex (space-between, center, row);
-        padding-left: 50px;
-        padding-right: 50px;
-
-        .divider {
-            background-color: rgba(192, 183, 232, 0.33);
-            @include respondTo ($_mobile){
-                display: none;
-            };
-            @include respondTo ($_desktop){
-                display: inline;
-                width: 1px;
-                height: 116px;
-            };
-        }
-    }
-            
-    #location > .icon {
-        height: 60px;
-        width: 40px;
-    }
-    #phone > .icon {
-        height: 55px;
-        width: 55px;
-    }
-    #mail > .icon {
-        height: 55px;
-        width: 60px;
     }
 
-
-    @include respondTo ($_mobile){     
-        margin-top: 53px;
-        height: 109px;
-
-        #rectangle_large {
-            display: none;
+    .divider {
+        background-color: rgba(192, 183, 232, 0.33);
+        display: inline;
+        width: 1px;
+        height: 116px;
+    }
+    
+    .contacts__article {
+        position: relative;
+        @include flex (space-around, center, row);
+        & > .icon {
+            margin-right: 20px;
+            margin-left: 50px;
         }
-        #rectangle_small {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-        #location {
-            @include flex (space-between , center, row);             
-        }
-        #phone,
-        #mail{
-            display: none;
-        }
-        .contacts__article-content {
-            margin-left: 20px;
-            height: 40px;
-            @include flex (space-between , flex-start, column);
-        }
+    }
+    .contacts__article-content {
+        @include flex (space-between , flex-start, column);
+        height: 100%;
+    
         h3 {
-            display: none;
-        }
-        p {
-            font-size: 1.4rem;
-        }
-    };           
-   
-    @include respondTo ($_desktop){
-        margin-top: 88px;
-        height: 167px;
-
-        #rectangle_large {
-            display: block;
-            position: absolute;
-            width: 1272px;
-            height: 167px;
-        }
-        #rectangle_small {
-            display: none;
-        }
-        #location,
-        #phone,
-        #mail {
-            @include flex (space-between, center, row);
-            height: 60px;
-        }          
-        .contacts__article-content {
-            margin-left: 20px;
-            height: 100%;
-            @include flex (space-between, flex-start, column);
-        }
-        h3 {
-            display: block;
             @include font_title(2.4rem, normal, bold);
         }
         p {
             font-size: 1.6rem;
         }
     }
-} 
+    #phone,
+    #mail{
+    @include flex (none, center, row);
+    height: 60px;
+    margin-right: 50px;
+    }
+    #location > .icon {
+        height: 55px;
+        width: 45px;
+    }
+    #phone > .icon {
+        height: 50px;
+        width: 50px;
+    }
+    #mail > .icon {
+        height: 50px;
+        width: 55px;
+    }
+}
+
+
 
 
 main {
@@ -730,44 +695,29 @@ main {
     };
 }
 
-.themen {
-    width: 100%;
-    @include flex (space-between, none, row);
+.themen {   
     @include respondTo ($_mobile){
-        margin-top: 26px;           
+        display: none 
     };
     @include respondTo ($_desktop){
+        @include flex (space-between, center, row);
         margin-top: 102px;
+        width: 100%;
+        height: 511px;
     };
 } 
-
 .themen__card {
-    height: 511px;
+    height: 100%;
+    position: relative;
     background-image: radial-gradient(circle at 50% 50%, #433d60, #211e2e 85%);
     border-radius: 40px;
-    @include respondTo ($_mobile){
-        width: 320px;
-        
-        &:nth-child(1){
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        }         
-        &:nth-child(n + 2) {
-        display: none;
-        }         
-    };
-    @include respondTo ($_desktop){
-        width: 310px;
-        margin-left: 11px;
-        &:nth-child(n) {        
-        display: inline;
-        }
-        &:first-child {
-            margin-left: 0;
-        }            
-    };
-
+    width: 310px;
+}
+         
+.themen__card-content {
+    @include flex (none, center, column);
+}
+.themen__card-image{
     #ellipse {
         display: block;
         margin-left: auto;
@@ -781,8 +731,7 @@ main {
         margin-right: auto;
     }
 }
-
-.themen__card-content {
+.themen__card-text {
     @include flex (none, center, column);
     .divider {
         width: 154px;
@@ -1358,3 +1307,93 @@ footer {
         };
     }
 }
+
+.header__bottom-swiper .swiper {
+    height: 109px;
+    position: relative;
+    margin-top: 53px;
+}
+
+.header__bottom-swiper {
+    @include respondTo ($_mobile){
+        background-image: url("/img/rectangle_small.png");   
+        width: 100%;
+        height: 109px;       
+    };
+    
+    @include respondTo ($_desktop){
+        display: none;
+    };
+    .swiper-slide {
+        width: 100%;
+    }
+  
+    .contacts__article {
+        position: absolute;
+        @include flex (center, center, row);
+        width: 330px;
+        height: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        & > .icon {
+            margin-right: 10px;
+            
+        }
+    }
+
+    .contacts__article-content {
+        @include flex (space-between , flex-start, column);
+        height: 100%;
+        height: 40px;
+        h3 {
+            @include font_title(1.4rem, normal, bold);
+        }
+        p {
+            font-size: 1.6rem;
+        }
+    }
+    #location > .icon {
+        height: 45px;
+        width: 35px;
+    }
+    #phone > .icon {
+        height: 40px;
+        width: 40px;
+    }
+    #mail > .icon {
+        height: 35px;
+        width: 40px;
+    }
+}
+
+
+.themen-swiper .swiper {
+    height: 511px;
+    width: 320px;
+    position: relative;
+    margin-top: 26px; 
+
+    .swiper-slide {
+        width: 100%;
+    }
+};   
+
+.themen-swiper {
+    @include respondTo ($_mobile){
+        @include flex (space-between, center, row);
+
+    };
+    @include respondTo ($_desktop){
+        display: none;
+    };
+} 
+
+
+
+       
+
+
+
+
+  
